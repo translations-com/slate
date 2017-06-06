@@ -4,106 +4,217 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>GlobalLink Connect API Reference</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #151515;
-  background-color: #ac4142;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #505050;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #d0d0d0;
-}
-.highlight .p, .highlight .pi {
-  color: #d0d0d0;
-}
-.highlight .gi {
-  color: #90a959;
-}
-.highlight .gd {
-  color: #ac4142;
-}
 .highlight .gh {
-  color: #6a9fb5;
-  background-color: #151515;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #aa759f;
-}
-.highlight .kc {
-  color: #d28445;
-}
-.highlight .kt {
-  color: #d28445;
-}
-.highlight .kd {
-  color: #d28445;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #90a959;
+  color: #999999;
 }
 .highlight .sr {
-  color: #75b5aa;
+  color: #f6aa11;
 }
-.highlight .si {
-  color: #8f5536;
+.highlight .go {
+  color: #888888;
 }
-.highlight .se {
-  color: #8f5536;
+.highlight .gp {
+  color: #555555;
 }
-.highlight .nn {
-  color: #f4bf75;
+.highlight .gs {
 }
-.highlight .nc {
-  color: #f4bf75;
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
 }
 .highlight .no {
-  color: #f4bf75;
+  color: #66d9ef;
 }
-.highlight .na {
-  color: #6a9fb5;
+.highlight .kt {
+  color: #66d9ef;
 }
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #90a959;
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
 }
 .highlight .ss {
-  color: #90a959;
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
 }
     </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;]">
+  <body class="index" data-languages="[&quot;csharp&quot;,&quot;java&quot;,&quot;php&quot;,&quot;ruby&quot;,&quot;python&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" />
+        <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
+      <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="csharp">.NET</a>
+              <a href="#" data-language-name="java">Java</a>
+              <a href="#" data-language-name="php">PHP</a>
+              <a href="#" data-language-name="ruby">Ruby</a>
+              <a href="#" data-language-name="python">Python</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -112,235 +223,1506 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='http://www.translations.com/globallink/demo.html'>Free consultation</a></li>
+            <li><a href='http://www.translations.com/globallink/contact.html'>Contact Us!</a></li>
             <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="customattribute">CustomAttribute</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">CustomAttribute</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">mandatory</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">type</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">values</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomAttribute</span>
+<span class="kd">extends</span> <span class="n">Object</span>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">CustomAttribute</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">mandatory</span><span class="o">,</span>
+    <span class="n">String</span> <span class="n">name</span><span class="o">,</span>
+    <span class="n">String</span> <span class="n">type</span><span class="o">,</span>
+    <span class="n">String</span> <span class="n">values</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDCustomAttribute</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$mandatory</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$type</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$values</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">PDCustomAttribute</span><span class="p">(</span><span class="nv">$customAttribute</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDCustomAttribute</span>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+    <span class="kp">attr_accessor</span> <span class="ss">:mandatory</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:type</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:values</span>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
-
-<h1 id="authentication">Authentication</h1>
-
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">customAttribute</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDCustomAttribute</span><span class="p">:</span>
+    <span class="n">mandatory</span> <span class="o">=</span> <span class="s">'false'</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Each project can be configured to allow users to specify custom attributes for their submissions. The custom attributes can be either plain text, or an enum. Custom attributes can be used for reporting, billing etc. eg. You could specify a Cost Center as a custom attribute and instruct your account manager to invoice by cost-center</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<h1 id="document">Document</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Document</span> <span class="p">:</span> <span class="n">ReferenceDocument</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">sourceLanguage</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span><span class="p">[]</span> <span class="n">targetLanguages</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">clientIdentifier</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">encoding</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">fileformat</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">instructions</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span> <span class="n">metadata</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span> <span class="n">targetWorkflowNames</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">Document</span><span class="p">()</span>
+    <span class="k">public</span> <span class="n">DocumentInfo</span> <span class="nf">getDocumentInfo</span><span class="p">(</span><span class="n">Submission</span> <span class="n">submission</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">TargetInfo</span><span class="p">[]</span> <span class="nf">getTargetInfos</span><span class="p">(</span><span class="n">Submission</span> <span class="n">submission</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">new</span> <span class="n">ResourceInfo</span> <span class="nf">getResourceInfo</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Document</span>
+<span class="kd">extends</span> <span class="n">ReferenceDocument</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">Document</span><span class="o">()</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">DocumentInfo</span> <span class="nf">getDocumentInfo</span><span class="o">(</span><span class="n">Submission</span> <span class="n">submission</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFileformat</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">ResourceInfo</span> <span class="nf">getResourceInfo</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSourceLanguage</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getTargetLanguages</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getTargetWorkflowNames</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setClientIdentifier</span><span class="o">(</span><span class="n">String</span> <span class="n">clientIdentifier</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEncoding</span><span class="o">(</span><span class="n">String</span> <span class="n">encoding</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setInstructions</span><span class="o">(</span><span class="n">String</span> <span class="n">instructions</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMetadata</span><span class="o">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">metadata</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSourceLanguage</span><span class="o">(</span><span class="n">String</span> <span class="n">sourceLanguage</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTargetLanguages</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">targetLanguages</span><span class="o">)</span><span class="err">'</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTargetWorkflowNames</span><span class="o">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">targetWorkflowNames</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDDocument</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$data</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$sourceLanguage</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$targetLanguages</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$clientIdentifier</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$encoding</span> <span class="o">=</span> <span class="s2">"UTF-8"</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$fileformat</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$instructions</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$metadata</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDocumentInfo</span><span class="p">(</span><span class="nv">$submission</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">getTargetInfos</span><span class="p">()</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getResourceInfo</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDDocument</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:data</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:sourceLanguage</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:targetLanguages</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:clientIdentifier</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:encoding</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:fileformat</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:instructions</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:metadata</span>
+    <span class="k">def</span> <span class="nf">initialize</span> 
+        <span class="vi">@encoding</span> <span class="o">=</span> <span class="s2">"UTF-8"</span>
+        <span class="vi">@clientIdentifier</span> <span class="o">=</span> <span class="kp">nil</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getDocumentInfo</span><span class="p">(</span><span class="n">submission</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getTargetInfos</span> <span class="p">(</span><span class="n">submission</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getResourceInfo</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDDocument</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">sourceLanguage</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">targetLanguages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">clientIdentifier</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">encoding</span> <span class="o">=</span> <span class="s">"UTF-8"</span>
+    <span class="n">fileformat</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">instructions</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
 </code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all kittens.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
+<p>This class will determine the necessary attributes to start a submission: </p>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td><code class="prettyprint">getDocumentInfo</code></td>
+<td><code class="prettyprint">DocumentInfo</code> object</td>
+<td>Internal method used by the UCF API</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td><code class="prettyprint">getFileformat</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getResourceInfo</code></td>
+<td><code class="prettyprint">ResourceInfo</code> object</td>
+<td>Internal method used by the UCF API</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSourceLanguage</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getTargetLanguages</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getTargetWorkflowNames</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">setClientIdentifier</code></td>
+<td></td>
+<td>Specify a unique identifier for this document (if one exists) in the content management system</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setEncoding</code></td>
+<td></td>
+<td>Set encoding</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setFileformat</code></td>
+<td></td>
+<td>Defaults to configured <code class="prettyprint">fileFormat</code> on project director</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setInstructions</code></td>
+<td></td>
+<td>Additional metadata that you may want to attach to your document</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setSourceLanguage</code></td>
+<td></td>
+<td>Set Source Language of the document</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setTargetLanguages</code></td>
+<td></td>
+<td>Set target languages into which this document will be translated</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setTargetWorkflowNames</code></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+<h1 id="glexchange">GLExchange</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">GLExchange</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">PDVERSION</span> <span class="p">=</span> <span class="s">"4.18.0"</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">ProjectDirectorConfig</span> <span class="n">pdConfig</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Submission</span> <span class="n">submission</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">BasicHttpBinding</span> <span class="n">binding</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">UsernameToken</span> <span class="n">USERNAMETOKEN</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">EndpointAddress</span> <span class="n">PROJECT_ENDPOINT_ADDRESS</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">EndpointAddress</span> <span class="n">TARGET_ENDPOINT_ADDRESS</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">EndpointAddress</span> <span class="n">SUBMISSION_ENDPOINT_ADDRESS</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">EndpointAddress</span> <span class="n">DOCUMENT_ENDPOINT_ADDRESS</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">EndpointAddress</span> <span class="n">USER_ENDPOINT_ADDRESS</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Project</span><span class="p">[]</span> <span class="n">projects</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nf">GLExchange</span><span class="p">(</span><span class="n">ProjectDirectorConfig</span> <span class="n">connectionConfig</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">String</span> <span class="nf">_cleanup</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">SS</span><span class="p">.</span><span class="n">Date</span> <span class="nf">_convertDate</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dateTime</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Batch</span><span class="p">[]</span> <span class="nf">_convertBatchesToInternal</span><span class="p">(</span><span class="n">SS</span><span class="p">.</span><span class="n">Batch</span><span class="p">[]</span> <span class="n">batches</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">_convertTargetsToInternal</span><span class="p">(</span><span class="n">TS</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="n">targets</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Project</span><span class="p">[]</span> <span class="nf">_convertProjectsToInternal</span><span class="p">(</span><span class="n">PS</span><span class="p">.</span><span class="n">Project</span><span class="p">[]</span> <span class="n">projects</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Submission</span><span class="p">[]</span> <span class="nf">_convertSubmissionsToInternal</span><span class="p">(</span><span class="n">SS</span><span class="p">.</span><span class="n">Submission</span><span class="p">[]</span> <span class="n">list</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">SubmissionInfo</span><span class="p">&gt;</span> <span class="nf">_createSubmissionInfos</span><span class="p">()</span>
+    <span class="k">private</span> <span class="n">SS</span><span class="p">.</span><span class="n">SubmissionInfo</span> <span class="nf">_createSubmissionInfo</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span>
+    <span class="k">private</span> <span class="kt">bool</span> <span class="nf">_endpointExists</span><span class="p">()</span>
+    <span class="k">private</span> <span class="n">String</span><span class="p">[]</span> <span class="nf">_getSubmitters</span><span class="p">(</span><span class="n">String</span> <span class="n">projectShortCode</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">Boolean</span> <span class="nf">_isSubmitterValid</span><span class="p">(</span><span class="n">String</span> <span class="n">projectShortCode</span><span class="p">,</span> <span class="n">String</span> <span class="n">submitter</span><span class="p">)</span>
+    <span class="k">private</span> <span class="n">Boolean</span> <span class="nf">_validateSubmission</span><span class="p">()</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">cancelDocument</span><span class="p">(</span><span class="n">String</span> <span class="n">targetTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">cancelDocument</span><span class="p">(</span><span class="n">String</span> <span class="n">documentTicket</span><span class="p">,</span> <span class="n">String</span> <span class="n">locale</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">cancelSubmission</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;&gt;</span> <span class="nf">getAvailableLanguageDirections</span><span class="p">(){</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCancelledTargetsByDocuments</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">documentTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCancelledTargetsBySubmissions</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">submissionTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCancelledTargetsByProjects</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">projectTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCompletedTargets</span><span class="p">(</span><span class="n">GL</span><span class="p">.</span><span class="n">Project</span> <span class="n">project</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCompletedTargetsByProjects</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">projectTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCompletedTargetsBySubmissions</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">submissionTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Target</span><span class="p">[]</span> <span class="nf">getCompletedTargetsByDocuments</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">documentTickets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">Target</span><span class="p">[]</span> <span class="nf">getCompletedTargetsByDocument</span><span class="p">(</span><span class="n">String</span> <span class="n">documentTicket</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">LanguagePhaseInfo</span> <span class="nf">getLanguagePhaseInfo</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">,</span> <span class="n">String</span> <span class="n">batchName</span><span class="p">,</span> <span class="n">String</span> <span class="n">targetLanguage</span><span class="p">,</span> <span class="n">String</span> <span class="n">phaseName</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Project</span> <span class="nf">getProject</span><span class="p">(</span><span class="n">String</span> <span class="n">projectShortcode</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Project</span><span class="p">[]</span> <span class="nf">getProjects</span><span class="p">()</span>
+    <span class="k">private</span> <span class="n">GL</span><span class="p">.</span><span class="n">Project</span><span class="p">[]</span> <span class="nf">getUserProjects</span><span class="p">()</span>
+    <span class="k">private</span> <span class="n">SS</span><span class="p">.</span><span class="n">Submission</span> <span class="nf">findSubmission</span><span class="p">(</span><span class="kt">string</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Batch</span><span class="p">[]</span> <span class="nf">getSubmissionBatches</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">getSubmissionName</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="kt">long</span> <span class="nf">getSubmissionId</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">ItemStatusEnum</span> <span class="nf">getSubmissionStatusEnum</span><span class="p">(</span> <span class="n">String</span> <span class="n">submissionTicket</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">getSubmissionStatus</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span><span class="p">[]</span> <span class="nf">getSubmissionTickets</span><span class="p">()</span>
+    <span class="k">public</span> <span class="n">GL</span><span class="p">.</span><span class="n">Submission</span><span class="p">[]</span> <span class="nf">getUnstartedSubmissions</span><span class="p">(</span><span class="n">GL</span><span class="p">.</span><span class="n">Project</span> <span class="n">project</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">initSubmission</span><span class="p">(</span><span class="n">GL</span><span class="p">.</span><span class="n">Submission</span> <span class="n">submission</span><span class="p">)</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">isSubmissionComplete</span><span class="p">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">sendDownloadConfirmation</span><span class="p">(</span><span class="n">String</span> <span class="n">targetTicket</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">setConnectionConfig</span><span class="p">(</span><span class="n">ProjectDirectorConfig</span> <span class="n">connectionConfig</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span><span class="p">[]</span> <span class="nf">startSubmission</span><span class="p">()</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">uploadReference</span><span class="p">(</span><span class="n">GL</span><span class="p">.</span><span class="n">ReferenceDocument</span> <span class="n">referenceDocument</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">uploadTranslatable</span><span class="p">(</span><span class="n">GL</span><span class="p">.</span><span class="n">Document</span> <span class="n">document</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GLExchange</span>
+<span class="kd">extends</span> <span class="n">Object</span>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">GLExchange</span><span class="o">(</span><span class="n">ProjectDirectorConfig</span> <span class="n">connectionConfig</span><span class="o">)</span>
+    <span class="kd">throws</span> <span class="n">Exception</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">cancelDocument</span><span class="o">(</span><span class="n">String</span> <span class="n">documentTicket</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">cancelDocument</span><span class="o">(</span><span class="n">String</span> <span class="n">documentTicket</span><span class="o">,</span> <span class="n">String</span> <span class="n">locale</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">cancelSubmission</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">cancelSubmission</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">,</span> <span class="n">String</span> <span class="n">comment</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">downloadCompletedTarget</span><span class="o">(</span><span class="n">String</span> <span class="n">ticket</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">InputStream</span><span class="o">[]</span> <span class="nf">downloadPreliminaryTargets</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">SubmissionWorkflowInfo</span> <span class="n">submissionWorkflowInfo</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">doClaim</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">InterruptedException</span>
+    <span class="kd">public</span> <span class="n">InputStream</span><span class="o">[]</span> <span class="nf">downloadTranslationKit</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">SubmissionWorkflowInfo</span> <span class="n">submissionWorkflowInfo</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">SubmissionWorkflowInfo</span><span class="o">[]</span> <span class="nf">findAvailableWorkflowInfosForClaim</span><span class="o">(</span><span class="kt">int</span> <span class="n">limit</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">SubmissionWorkflowInfo</span><span class="o">[]</span> <span class="nf">findAvailableWorkflowInfosForDownload</span><span class="o">(</span><span class="kt">int</span> <span class="n">limit</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getAvailableSubmissions</span><span class="o">(</span><span class="n">String</span> <span class="n">STATE</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">Target</span><span class="o">[]</span> <span class="nf">getCancelledTargets</span><span class="o">(</span><span class="kt">int</span> <span class="n">maxResults</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Target</span><span class="o">[]</span> <span class="nf">getCancelledTargets</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Target</span><span class="o">[]</span> <span class="nf">getCompletedTargets</span><span class="o">(</span><span class="kt">int</span> <span class="n">maxResults</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Target</span><span class="o">[]</span> <span class="nf">getCompletedTargets</span><span class="o">(</span><span class="n">Project</span> <span class="n">project</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Target</span><span class="o">[]</span> <span class="nf">getCompletedTargetsByDocuments</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">documentTickets</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Project</span> <span class="nf">getProject</span><span class="o">(</span><span class="n">String</span> <span class="n">shortCode</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Project</span><span class="o">[]</span> <span class="nf">getProjects</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubmissionName</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getSubmissionTickets</span><span class="o">()</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">Submission</span><span class="o">[]</span> <span class="nf">getUnstartedSubmissions</span><span class="o">(</span><span class="n">Project</span> <span class="n">project</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initSubmission</span><span class="o">(</span><span class="n">Submission</span> <span class="n">submission</span><span class="o">)</span>
+<span class="err">`</span>               <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isSubmissionComplete</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubmissionStatus</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionTicket</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">startSubmission</span><span class="o">()</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">uploadReference</span><span class="o">(</span><span class="n">ReferenceDocument</span> <span class="n">referenceDocument</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">uploadTranslatable</span><span class="o">(</span><span class="n">Document</span> <span class="n">document</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">uploadTranslationKit</span><span class="o">(</span><span class="n">String</span> <span class="n">fileName</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">inputStream</span><span class="o">)</span>
+                <span class="kd">throws</span> <span class="n">InterruptedException</span><span class="o">,</span> <span class="n">IOException</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">GLExchange</span>
+    <span class="k">private</span> <span class="nv">$pdConfig</span><span class="p">;</span> <span class="c1">// PDConfig
+</span>    <span class="k">private</span> <span class="nv">$submission</span><span class="p">;</span> <span class="c1">// Submission
+</span>    <span class="k">private</span> <span class="nv">$projectService</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$userProfileService</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$targetService</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$documentService</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$submissionService</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$workflowService</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">GLExchange</span><span class="p">(</span><span class="nv">$connectionConfig</span><span class="p">)</span> 
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_setConnectionConfig</span><span class="p">(</span><span class="nv">$connectionConfig</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_convertTargetsToInternal</span><span class="p">(</span><span class="nv">$targets</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_createSubmissionInfo</span><span class="p">()</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_createWorkflowRequest</span><span class="p">(</span><span class="nv">$submissionWorkflowInfo</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_validateDocument</span><span class="p">(</span><span class="nv">$document</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">_validateSubmission</span><span class="p">(</span><span class="nv">$submission</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">downloadTranslationKit</span><span class="p">(</span><span class="nv">$submissionWorkflowInfo</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getProject</span><span class="p">(</span><span class="nv">$projectShortCode</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getProjects</span><span class="p">()</span>
+    <span class="k">function</span> <span class="nf">getSubmissionTicket</span><span class="p">()</span>
+    <span class="k">function</span> <span class="nf">getSubmissionName</span><span class="p">(</span><span class="nv">$submissionTicket</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">cancelTargetByDocumentTicket</span><span class="p">(</span><span class="nv">$documentTicket</span><span class="p">,</span> <span class="nv">$locale</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">cancelTarget</span><span class="p">(</span><span class="nv">$targetTicket</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">cancelSubmission</span><span class="p">(</span><span class="nv">$submissionTicket</span><span class="p">,</span> <span class="nv">$comment</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">downloadTarget</span><span class="p">(</span><span class="nv">$ticket</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">findAvailableWorkflowInfosForClaim</span><span class="p">(</span><span class="nv">$limit</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">findAvailableWorkflowInfosForDownload</span><span class="p">(</span><span class="nv">$limit</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getCancelledTargetsBySubmission</span><span class="p">(</span><span class="nv">$submissionTickets</span><span class="p">,</span> <span class="nv">$maxResults</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getCancelledTargets</span><span class="p">(</span><span class="nv">$maxResults</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getCompletedTargetsByProject</span><span class="p">(</span><span class="nv">$project</span><span class="p">,</span> <span class="nv">$maxResults</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getCompletedTargets</span><span class="p">(</span><span class="nv">$maxResults</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getCompletedTargetsBySubmission</span><span class="p">(</span><span class="nv">$submissionTickets</span><span class="p">,</span> <span class="nv">$maxResults</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getPreliminaryTargets</span><span class="p">(</span><span class="nv">$submissionWorkflowInfo</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">getUnstartedSubmissions</span><span class="p">(</span><span class="nv">$project</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">initSubmission</span><span class="p">(</span><span class="nv">$submission</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">isSubmitterValid</span><span class="p">(</span><span class="nv">$shortCode</span><span class="p">,</span> <span class="nv">$newSubmitter</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">sendDownloadConfirmation</span><span class="p">(</span><span class="nv">$ticket</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">startSubmission</span><span class="p">()</span>
+    <span class="k">function</span> <span class="nf">uploadReference</span><span class="p">(</span><span class="nv">$referenceDocument</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">uploadTranslatable</span><span class="p">(</span><span class="nv">$document</span><span class="p">)</span>
+    <span class="k">function</span> <span class="nf">uploadTranslationKit</span><span class="p">(</span><span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">GLExchange</span>
+    <span class="vi">@connectionConfig</span>
+    <span class="vi">@submission</span>
+
+    <span class="vi">@documentService</span>
+    <span class="vi">@projectService</span>
+    <span class="vi">@submissionService</span>
+    <span class="vi">@targetService</span>
+    <span class="vi">@userProfileService</span>
+    <span class="vi">@workflowService</span>
+
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="n">setConnectionConfig</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">cancelDocument</span> <span class="p">(</span><span class="n">documentTicket</span><span class="p">,</span> <span class="n">locale</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">cancelSubmission</span> <span class="p">(</span><span class="n">submissionTicket</span><span class="p">,</span> <span class="n">comment</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">downloadTarget</span> <span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCancelledTargets</span> <span class="p">(</span><span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCancelledTargetsBySubmission</span><span class="p">(</span><span class="n">submissionTicket</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargets</span> <span class="p">(</span><span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargetsByProject</span> <span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">maxResults</span> <span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargetsByDocuments</span> <span class="p">(</span><span class="n">documentTickets</span><span class="p">,</span> <span class="n">maxResults</span> <span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargetsBySubmission</span><span class="p">(</span><span class="n">submissionTicket</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getProject</span><span class="p">(</span><span class="n">shortCode</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getProjects</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getSubmissionName</span> <span class="p">(</span><span class="n">submissionTicket</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getSubmissionTicket</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">getUnstartedSubmissions</span> <span class="p">(</span><span class="n">project</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">initSubmission</span><span class="p">(</span><span class="n">submission</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">isSubmitterValid</span><span class="p">(</span><span class="n">shortCode</span><span class="p">,</span> <span class="n">submitter</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">sendDownloadConfirmation</span> <span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">startSubmission</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">uploadReference</span> <span class="p">(</span><span class="n">referenceDocument</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">uploadTranslatable</span> <span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">createSubmissionInfo</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">validateDocument</span> <span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">validateSubmission</span> <span class="p">(</span><span class="n">submission</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">addHeaders</span> <span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">def</span> <span class="nf">setConnectionConfig</span><span class="p">(</span><span class="n">config</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">GLExchange</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setConnectionConfig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__setHeaders</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__createSubmissionInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__getDocumentInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__getDocumentTargetInfos</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__getDocumentResourceInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__validateDocument</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__validateSubmission</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submission</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">cancelDocument</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documentTicket</span><span class="p">,</span> <span class="n">locale</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">cancelSubmission</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submissionTicket</span><span class="p">,</span> <span class="n">comment</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">downloadTarget</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ticket</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getCancelledTargets</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getCancelledTargetsBySubmission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submissionTicket</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargets</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargetsByProject</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">maxResults</span> <span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getCompletedTargetsBySubmission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submissionTicket</span><span class="p">,</span> <span class="n">maxResults</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getProject</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shortCode</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getProjects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">includeSubProjects</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getSubmissionName</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submissionTicket</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getSubmissionTicket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getUnstartedSubmissions</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">initSubmission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">submission</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">isSubmitterValid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shortCode</span><span class="p">,</span> <span class="n">submitter</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">sendDownloadConfirmation</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ticket</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">startSubmission</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">uploadReference</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">referenceDocument</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">uploadTranslatable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
+<p>This is the main API class. It will initialize a connection to Project Director. Different methods are available to perform the necessary operations: </p>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><code class="prettyprint">cancelDocument</code></td>
+<td></td>
+<td>Cancel document for all languages or Cancel document for specified target language</td>
+</tr>
+<tr>
+<td><code class="prettyprint">cancelSubmission</code></td>
+<td></td>
+<td>Cancel Submission for all languages or Cancel Submission for all languages with comment</td>
+</tr>
+<tr>
+<td><code class="prettyprint">downloadCompletedTarget</code></td>
+<td></td>
+<td>Downloads target document from PD or Download all complted targets</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getCancelledTargets</code></td>
+<td>Array of cancelled targets</td>
+<td>Get cancelled targets for all projects or Get cancelled targets for a submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getCompletedTargets</code></td>
+<td>Array of completed targets</td>
+<td>Get completed targets for all projects or Get completed targets for specified project or Get completed targets for submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getCompletedTargetsByDocuments</code></td>
+<td>Array of completed targets</td>
+<td>Get completed targets by document tickets</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProject</code></td>
+<td>Project with specified shortcode</td>
+<td>Get project by it`s shortcode</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProjects</code></td>
+<td>Array of Projects with subprojects to which the logged in user has access to</td>
+<td>Get all user projects</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmissionName</code></td>
+<td>Submission name for the specified ticket.</td>
+<td>Get Submission name for specified ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmissionTickets</code></td>
+<td>Submission ticket.</td>
+<td>Get Submission ticket if a submission has been initialized</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getUnstartedSubmissions</code></td>
+<td>Array of Submissions that have not been started.</td>
+<td>Get Unstarted Submissions</td>
+</tr>
+<tr>
+<td><code class="prettyprint">initSubmission</code></td>
+<td></td>
+<td>Initialize a new Submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">isSubmissionComplete</code></td>
+<td>True if submission is complete.</td>
+<td>Get Submission status for specified ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmissionStatus</code></td>
+<td>True if submission is complete.</td>
+<td>Get Submission status for specified ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">sendDownloadConfirmation</code></td>
+<td></td>
+<td>Sends confirmation that the target resources was downloaded successfully by the customer</td>
+</tr>
+<tr>
+<td><code class="prettyprint">startSubmission</code></td>
+<td>Submission Ticket</td>
+<td>Start Submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">uploadReference</code></td>
+<td></td>
+<td>Upload reference file for submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">uploadTranslatable</code></td>
+<td>Document Ticket</td>
+<td>Uploads the document to project director for translation</td>
+</tr>
+<tr>
+<td><code class="prettyprint">uploadTranslationKit</code></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
+<h1 id="languagedirection">LanguageDirection</h1>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+<p>A language direction defines the source and target language direction for which users can submit translation requests.</p>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">LanguageDirection</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">sourceLanguage</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">targetLanguage</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">LanguageDirection</span><span class="p">(</span><span class="n">ProjectLanguageDirection</span> <span class="n">direction</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LanguageDirection</span>
+<span class="kd">extends</span> <span class="n">Object</span>
 
-<p>The Kittn API uses the following error codes:</p>
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">LanguageDirection</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">ProjectLanguageDirection</span> <span class="n">direction</span><span class="o">)</span>
+
+<span class="c1">//Field Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">sourceLanguage</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">targetLanguage</span>
+    <span class="kd">public</span> <span class="n">TMProfile</span> <span class="n">TM</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDLanguageDirection</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$sourceLanguage</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$sourceLanguageName</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$targetLanguage</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$targetLanguageName</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">PDLanguageDirection</span><span class="p">(</span><span class="nv">$externalLanguageDirection</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDLanguageDirection</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:sourceLanguage</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:targetLanguage</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDLanguageDirection</span><span class="p">:</span>
+    <span class="n">sourceLanguage</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">targetLanguage</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">externalLanguageDirection</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sourceLanguage</span> <span class="o">=</span> <span class="n">externalLanguageDirection</span><span class="o">.</span><span class="n">sourceLanguage</span><span class="o">.</span><span class="n">locale</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">targetLanguage</span> <span class="o">=</span> <span class="n">externalLanguageDirection</span><span class="o">.</span><span class="n">targetLanguage</span><span class="o">.</span><span class="n">locale</span>
+</code></pre>
+<h1 id="project">Project</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Project</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">shortcode</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">ticket</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">LanguageDirection</span><span class="p">[]</span> <span class="n">languageDirections</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span><span class="p">[]</span> <span class="n">fileFormats</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Workflow</span><span class="p">[]</span> <span class="n">workflows</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">CustomAttribute</span><span class="p">[]</span> <span class="n">customAttributes</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span><span class="p">[]</span> <span class="n">submitters</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">Project</span><span class="p">(</span><span class="n">PS</span><span class="p">.</span><span class="n">Project</span> <span class="n">project</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Project</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">Project</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">Project</span> <span class="n">project</span><span class="o">)</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">CustomAttribute</span><span class="o">[]</span> <span class="nf">getCustomAttributes</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getFileFormats</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">LanguageDirection</span><span class="o">[]</span> <span class="nf">getLanguageDirections</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getShortcode</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getSubmitters</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTicket</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">Workflow</span><span class="o">[]</span> <span class="nf">getWorkflows</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSubmitters</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">submitters</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDProject</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$shortcode</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$ticket</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$languageDirections</span> <span class="o">=</span> <span class="k">array</span> <span class="p">();</span>
+    <span class="k">public</span> <span class="nv">$fileFormats</span> <span class="o">=</span> <span class="k">array</span> <span class="p">();</span>
+    <span class="k">public</span> <span class="nv">$workflows</span> <span class="o">=</span> <span class="k">array</span> <span class="p">();</span>
+    <span class="k">public</span> <span class="nv">$customAttributes</span> <span class="o">=</span> <span class="k">array</span> <span class="p">();</span>
+    <span class="k">function</span> <span class="nf">PDProject</span><span class="p">(</span><span class="nv">$externalProject</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDProject</span>
+
+    <span class="kp">attr_accessor</span> <span class="ss">:shortCode</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:ticket</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:languageDirections</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:fileFormats</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:workflows</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:customAttributes</span>
+
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">externalProject</span><span class="p">)</span>
+        <span class="vi">@name</span> <span class="o">=</span> <span class="n">externalProject</span><span class="p">.</span><span class="nf">projectInfo</span><span class="p">.</span><span class="nf">name</span><span class="p">;</span>
+        <span class="vi">@shortCode</span> <span class="o">=</span> <span class="n">externalProject</span><span class="p">.</span><span class="nf">projectInfo</span><span class="p">.</span><span class="nf">shortCode</span><span class="p">;</span>
+        <span class="vi">@ticket</span> <span class="o">=</span> <span class="n">externalProject</span><span class="p">.</span><span class="nf">ticket</span>
+        <span class="vi">@languageDirections</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+        <span class="vi">@fileFormats</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+        <span class="vi">@workflows</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+        <span class="vi">@customAttributes</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+    <span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDProject</span><span class="p">:</span>
+    <span class="n">shortCode</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">ticket</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">languageDirections</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">fileFormats</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">workflows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">customAttributes</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">getCustomAttributes</code></td>
+<td>List of configured Custom Attributes for this project</td>
+<td>Get Custom Attributes</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getFileFormats</code></td>
+<td>List of configured file formats for this project</td>
+<td>Get File Formats</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getLanguageDirections</code></td>
+<td>List of configured language directions for this project</td>
+<td>Get language directions</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getName</code></td>
+<td>Descriptive project name</td>
+<td>Get Project Name</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getShortcode</code></td>
+<td>User friendly Project Short Code</td>
+<td>Get Project Short Code</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmitters</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getTicket</code></td>
+<td>Project Ticket that is used for internal API communication</td>
+<td>Get Project Ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getWorkflows</code></td>
+<td>List of configured workflows for this project</td>
+<td>Get Workflows</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setSubmitters</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h1 id="projectdirectorconfig">ProjectDirectorConfig</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">private</span> <span class="k">static</span> <span class="n">ProjectDirectorConfig</span> <span class="nf">getPDConfig</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ProjectDirectorConfig</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ProjectDirectorConfig</span><span class="p">();</span>
+    <span class="kt">string</span> <span class="n">url</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="n">CONFIG_URL</span><span class="p">];</span>
+    <span class="kt">string</span> <span class="n">username</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="n">CONFIG_USERNAME</span><span class="p">];</span>
+    <span class="kt">string</span> <span class="n">password</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="n">CONFIG_PASSWORD</span><span class="p">];</span>
+    <span class="kt">string</span> <span class="n">userAgent</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="n">CONFIG_USERAGENT</span><span class="p">];</span>
+    <span class="n">config</span><span class="p">.</span><span class="n">userAgent</span> <span class="p">=</span> <span class="n">userAgent</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">config</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProjectDirectorConfig</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">ProjectDirectorConfig</span><span class="o">()</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPassword</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">ProxyConfig</span> <span class="nf">getProxy</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTimeOut</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUrl</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUserAgent</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUsername</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">isEnableMTOM</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEnableMTOM</span><span class="o">(</span><span class="n">Boolean</span> <span class="n">enableMTOM</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">password</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProxy</span><span class="o">(</span><span class="n">ProxyConfig</span> <span class="n">proxy</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTimeOut</span><span class="o">(</span><span class="kt">int</span> <span class="n">timeOut</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUrl</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserAgent</span><span class="o">(</span><span class="n">String</span> <span class="n">userAgent</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUsername</span><span class="o">(</span><span class="n">String</span> <span class="n">username</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDConfig</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$url</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$username</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$password</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$proxyConfig</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$userAgent</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">ProjectDirectorConfig</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:password</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:url</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:username</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:userAgent</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">ProjectDirectorConfig</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">userAgent</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre>
+<p>Project director configuration</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
+<td><code class="prettyprint">getPassword</code></td>
+<td>String Project Director password</td>
+<td>Get Project Director configured password</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
+<td><code class="prettyprint">getProxy</code></td>
+<td>Proxy configuration for outbound traffic</td>
+<td>Get the proxy configuration for communication between adaptor and GLC</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+<td><code class="prettyprint">getTimeOut</code></td>
+<td>Int Response timeout for webservice calls</td>
+<td>Get the timeout value</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
+<td><code class="prettyprint">getUrl</code></td>
+<td>String URL or IP address of the Project Director server</td>
+<td>Get Project Director URL</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+<td><code class="prettyprint">getUserAgent</code></td>
+<td>String user Agent for this client</td>
+<td>Returns</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+<td><code class="prettyprint">getUsername</code></td>
+<td>Project Director username</td>
+<td>Get Project Director configured username</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
+<td><code class="prettyprint">isEnableMTOM</code></td>
+<td>Boolean</td>
+<td>Returns <code class="prettyprint">true</code> if MTOM is enabled</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
+<td><code class="prettyprint">setEnableMTOM</code></td>
+<td></td>
+<td>Set it to <code class="prettyprint">false</code> to disable MTOM. Default is <code class="prettyprint">true</code></td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
+<td><code class="prettyprint">setPassword</code></td>
+<td></td>
+<td>Sets Project Director password</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+<td><code class="prettyprint">setProxy</code></td>
+<td></td>
+<td>Set proxy configuration for outbound traffic</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td><code class="prettyprint">setTimeOut</code></td>
+<td></td>
+<td>Set response timeout for webservice calls</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setUrl</code></td>
+<td></td>
+<td>URL of the project director server to connect to</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setUserAgent</code></td>
+<td></td>
+<td>Sets the user Agent for this client. A user agent is any user friendly identifier which is used to categorize the logging on GlobalLink</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setUsername</code></td>
+<td></td>
+<td>Sets Project Director username</td>
 </tr>
 </tbody></table>
 
+<h1 id="proxy-config">Proxy Config</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="c1">///No code snippet yet</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProxyConfig</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">ProxyConfig</span><span class="o">()</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getProxyHost</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getProxyPassword</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getProxyPort</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getProxyUser</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProxyHost</span><span class="o">(</span><span class="n">String</span> <span class="n">proxyHost</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProxyPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">proxyPassword</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProxyPort</span><span class="o">(</span><span class="kt">int</span> <span class="n">proxyPort</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProxyUser</span><span class="o">(</span><span class="n">String</span> <span class="n">proxyUser</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">ProxyConfig</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$proxyHost</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$proxyPort</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$proxyUser</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$proxyPassword</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1">#No code snippet yet</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="c">#No code snippet yet</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">getProxyHost</code></td>
+<td>String</td>
+<td>Returns proxy server IP address or hostname</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProxyPassword</code></td>
+<td>String</td>
+<td>Returns proxy user password</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProxyPort</code></td>
+<td>Int</td>
+<td>Returns proxy server port</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProxyUser</code></td>
+<td>String</td>
+<td>Returns proxy user</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setProxyHost</code></td>
+<td></td>
+<td>Set Proxy server IP address or hostname</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setProxyPassword</code></td>
+<td></td>
+<td>Proxy server user password</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setProxyPort</code></td>
+<td></td>
+<td>Set Proxy server port</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setProxyUser</code></td>
+<td></td>
+<td>Set Proxy user</td>
+</tr>
+</tbody></table>
+
+<h1 id="referencedocument">ReferenceDocument</h1>
+
+<p>Reference documents contain additional information which provide more context about the Documents that have been submitted for translation. eg. While submitting Indesign documents, the reference files usually contain the published source PDF The ReferenceDocuments do not require translation and are not accounted for in the translation wordcounts.</p>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">ReferenceDocument</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">data</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">setDataFromString</span><span class="p">(</span><span class="n">String</span> <span class="n">data</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">setDataFromMemoryStream</span><span class="p">(</span><span class="n">MemoryStream</span> <span class="n">data</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">ResourceInfo</span> <span class="nf">getResourceInfo</span><span class="p">()</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">getDataAsString</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReferenceDocument</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">ReferenceDocument</span><span class="o">()</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">getData</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">getDataAsInputStream</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">ResourceInfo</span> <span class="nf">getResourceInfo</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">data</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">data</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="n">InputStream</span> <span class="n">inputStream</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">IOException</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="n">String</span> <span class="n">data</span><span class="o">,</span>
+                <span class="n">String</span> <span class="n">encoding</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">UnsupportedEncodingException</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDReferenceDocument</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$data</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getResourceInfo</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDReferenceDocument</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:data</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+
+    <span class="k">def</span> <span class="nf">getResourceInfo</span>
+        <span class="n">resourceInfo</span> <span class="o">=</span> <span class="no">ResourceInfonew</span>
+        <span class="n">resourceInfo</span><span class="p">.</span><span class="nf">size</span> <span class="o">=</span> <span class="vi">@data</span><span class="p">.</span><span class="nf">length</span>
+        <span class="n">resourceInfo</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="vi">@name</span>
+        <span class="k">return</span> <span class="n">resourceInfo</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="c">#No code snippet yet</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">getDataAsInputStream</code></td>
+<td><code class="prettyprint">InputStream</code></td>
+<td>Gets data as InputStream</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getName</code></td>
+<td>String</td>
+<td>Gets the name of the document</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getResourceInfo</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">setData</code></td>
+<td></td>
+<td>Set data from byte array or set data from <code class="prettyprint">InputStream</code> or set data from string or set <code class="prettyprint">data(byte[])</code> from string using encoding</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setName</code></td>
+<td></td>
+<td>Set document name</td>
+</tr>
+</tbody></table>
+
+<h1 id="submission">Submission</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Submission</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span> <span class="n">customAttributes</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">DateTime</span> <span class="n">dueDate</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">instructions</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Boolean</span> <span class="n">isUrgent</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span> <span class="n">metadata</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">pmNotes</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Project</span> <span class="n">project</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="n">tickets</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">submitter</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Workflow</span> <span class="n">workflow</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">owner</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">paClientTicket</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">Submission</span><span class="p">()</span>
+    <span class="k">public</span> <span class="nf">Submission</span><span class="p">(</span><span class="n">SubmissionServiceRef</span><span class="p">.</span><span class="n">Submission</span> <span class="n">submission</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">setTickets</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">tickets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">addTicket</span><span class="p">(</span><span class="n">String</span> <span class="n">ticket</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Submission</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">Submission</span><span class="o">()</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getCustomAttributes</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">Date</span> <span class="nf">getDueDate</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getInstructions</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getMetadata</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getOwner</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPmNotes</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">Project</span> <span class="nf">getProject</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubmitter</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getTickets</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">Workflow</span> <span class="nf">getWorkflow</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isUrgent</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCustomAttributes</span><span class="o">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">customAttributes</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDueDate</span><span class="o">(</span><span class="n">Date</span> <span class="n">dueDate</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setInstructions</span><span class="o">(</span><span class="n">String</span> <span class="n">instructions</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMetadata</span><span class="o">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">metadata</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">submissionName</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setOwner</span><span class="o">(</span><span class="n">String</span> <span class="n">owner</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPmNotes</span><span class="o">(</span><span class="n">String</span> <span class="n">pmNotes</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProject</span><span class="o">(</span><span class="n">Project</span> <span class="n">project</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSubmitter</span><span class="o">(</span><span class="n">String</span> <span class="n">submitter</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTickets</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">tickets</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addTicket</span><span class="o">(</span><span class="n">String</span> <span class="n">ticket</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUrgent</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">isUrgent</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWorkflow</span><span class="o">(</span><span class="n">Workflow</span> <span class="n">workflow</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDSubmission</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$customAttributes</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$dueDate</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$instructions</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$isUrgent</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$metadata</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$project</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$pmNotes</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$submitter</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$ticket</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$workflow</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDSubmission</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:customAttributes</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:dueDate</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:instructions</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:isUrgent</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:metadata</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:project</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:pmNotes</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:submitter</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:ticket</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:workflow</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDSubmission</span><span class="p">:</span>
+    <span class="n">customAttributes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dueDate</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">instructions</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">isUrgent</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">project</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">pmNotes</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">submitter</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">ticket</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="n">workflow</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">getCustomAttributes</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getDueDate</code></td>
+<td>Date</td>
+<td>Returns due date of submission</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getInstructions</code></td>
+<td>String</td>
+<td>Returns submission instructions</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getMetadata</code></td>
+<td>Hash</td>
+<td>Returns submission metadata</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getName</code></td>
+<td>String</td>
+<td>Returns submission name</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getPmNotes</code></td>
+<td>String</td>
+<td>Returns submission pm notes</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getProject</code></td>
+<td>String</td>
+<td>Returns submission project</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmitter</code></td>
+<td>String</td>
+<td>Returns submission submitter</td>
+</tr>
+<tr>
+<td><code class="prettyprint">isUrgent</code></td>
+<td>Boolean</td>
+<td>Returns if submission is urgent or not</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setCustomAttributes</code></td>
+<td></td>
+<td><em>Optional</em> - Set custom attributes. <code class="prettyprint">Project.getCustomAttributes()</code> gets you the list of configured attributes for the project</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setDueDate</code></td>
+<td></td>
+<td><em>Optional</em> - Due date by when the submission should be completed in Project Director. This should always be greater than current date. If due date is not specified, Project Director will rely on the configured language model to calculate a due date</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setInstructions</code></td>
+<td></td>
+<td><em>Optional</em> - Set instructions for the translators</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setMetadata</code></td>
+<td></td>
+<td><em>Optional</em> - Key-value pair of metadata</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setName</code></td>
+<td></td>
+<td>Name of the submission that will show up in Project Director</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setOwner</code></td>
+<td></td>
+<td><em>Optional</em> - Set the submitter to a user other than the logged in user</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setPmNotes</code></td>
+<td></td>
+<td><em>Optional</em> - Notes for the project managers</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setProject</code></td>
+<td></td>
+<td>Set the project for which this submission will be created</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setSubmitter</code></td>
+<td></td>
+<td><em>Optional</em> - Set the submitter to a user other than the logged in user</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setUrgent</code></td>
+<td></td>
+<td><em>Optional</em> - Set priority. Defaults to Normal</td>
+</tr>
+</tbody></table>
+
+<h1 id="target">Target</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Target</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">clientIdentifier</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">documentName</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">documentTicket</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">sourceLocale</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">targetLocale</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span> <span class="n">metadata</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">submissionName</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">ticket</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">WordCount</span> <span class="n">wordCount</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">Target</span><span class="p">(</span><span class="n">TS</span><span class="p">.</span><span class="n">Target</span> <span class="n">dtoTarget</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">MemoryStream</span>  <span class="nf">getData</span><span class="p">(</span><span class="n">GLExchange</span> <span class="n">xchange</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">sendDownloadConfirmation</span><span class="p">(</span><span class="n">GLExchange</span> <span class="n">xchange</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Target</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">Target</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">Target</span> <span class="n">dtoTarget</span><span class="o">)</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getClientIdentifier</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDocumentName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDocumentTicket</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getMetadata</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSourceLocale</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubmissionName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTargetLocale</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTicket</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">WordCount</span> <span class="nf">getWordCount</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">getData</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">getData</span><span class="o">(</span><span class="n">GLExchange</span> <span class="n">xchange</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="n">InputStream</span> <span class="n">data</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDocumentName</span><span class="o">(</span><span class="n">String</span> <span class="n">documentName</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDTarget</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$clientIdentifier</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$documentName</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$documentTicket</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$sourceLocale</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$targetLocale</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$metadata</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$ticket</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$wordCount</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">PDTarget</span><span class="p">(</span><span class="nv">$externalTarget</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDTarget</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:clientIdentifier</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:documentName</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:documentTicket</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:sourceLocale</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:targetLocale</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:metadata</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:ticket</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:wordCount</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">externalTarget</span><span class="p">)</span>
+        <span class="vi">@documentName</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">document</span><span class="p">.</span><span class="nf">documentInfo</span><span class="p">.</span><span class="nf">name</span>
+        <span class="vi">@sourceLocale</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">sourceLanguage</span><span class="p">.</span><span class="nf">locale</span>
+        <span class="vi">@targetLocale</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">targetLanguage</span><span class="p">.</span><span class="nf">locale</span>
+        <span class="vi">@ticket</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">ticket</span>
+        <span class="vi">@documentTicket</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">document</span><span class="p">.</span><span class="nf">ticket</span>
+        <span class="vi">@clientIdentifier</span> <span class="o">=</span> <span class="n">externalTarget</span><span class="p">.</span><span class="nf">document</span><span class="p">.</span><span class="nf">documentInfo</span><span class="p">.</span><span class="nf">clientIdentifier</span>
+        <span class="vi">@metadata</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDTarget</span><span class="p">:</span>
+    <span class="n">clientIdentifier</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">documentName</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">documentTicket</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">sourceLocale</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">targetLocale</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">ticket</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">wordCount</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Sumary</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">getClientIdentifier</code></td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getDocumentName</code></td>
+<td>String Name of the document that was submitted for translation</td>
+<td>Get Document Name</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getDocumentTicket</code></td>
+<td>String Document Ticket of the source document that was submitted for translation</td>
+<td>Get Document Ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getMetadata</code></td>
+<td>Hash Metadata</td>
+<td>Get metadata in the form of key-value pairs set on the document that was submitted for translation</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSourceLocale</code></td>
+<td>String Source locale of this target</td>
+<td>Get Source locale (language ISO code)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getSubmissionName</code></td>
+<td>String</td>
+<td>Get the Submission name</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getTargetLocale</code></td>
+<td>String Target locale of this target</td>
+<td>Get the Locale (language ISO code) for this target</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getTicket</code></td>
+<td>String Target ticket</td>
+<td>Get Target Ticket</td>
+</tr>
+<tr>
+<td><code class="prettyprint">getWordCount</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="prettyprint">getData</code></td>
+<td><code class="prettyprint">InputStream</code> containing the translated content</td>
+<td>Get translated data or get translated data and download if empty</td>
+</tr>
+<tr>
+<td><code class="prettyprint">setDocumentName</code></td>
+<td></td>
+<td>Set Document Name</td>
+</tr>
+</tbody></table>
+
+<h1 id="tm-profile">TM Profile</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="c1">///No code snippet yet</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TMProfile</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">TMProfile</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span>
+         <span class="n">String</span> <span class="n">username</span><span class="o">,</span>
+         <span class="n">String</span> <span class="n">password</span><span class="o">,</span>
+         <span class="n">String</span> <span class="n">tMName</span><span class="o">)</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPassword</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTMName</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUrl</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUsername</span><span class="o">()</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="c1">//No code snippet yet
+</span><span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1">#No code snippet yet</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="c">#No code snippet yet</span>
+</code></pre>
+<h1 id="wordcount">WordCount</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">WordCount</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">golden</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">exact_100</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">fuzzy</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">repetitions</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">nomatch</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">total</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">WordCount</span><span class="p">(</span><span class="kt">int</span> <span class="n">_golden</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_exact_100</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_repetitions</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_nomatch</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_total</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">golden</span> <span class="p">=</span> <span class="n">_golden</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">exact_100</span> <span class="p">=</span> <span class="n">_exact_100</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">fuzzy</span> <span class="p">=</span> <span class="n">_total</span> <span class="p">-</span> <span class="n">_golden</span> <span class="p">-</span> <span class="n">_exact_100</span> <span class="p">-</span> <span class="n">_repetitions</span> <span class="p">-</span> <span class="n">_nomatch</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">repetitions</span> <span class="p">=</span> <span class="n">_repetitions</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">nomatch</span> <span class="p">=</span> <span class="n">_nomatch</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">total</span> <span class="p">=</span> <span class="n">_total</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordCount</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">WordCount</span><span class="o">(</span><span class="kt">int</span> <span class="n">_golden</span><span class="o">,</span>
+         <span class="kt">int</span> <span class="n">_exact_100</span><span class="o">,</span>
+         <span class="kt">int</span> <span class="n">_repetitions</span><span class="o">,</span>
+         <span class="kt">int</span> <span class="n">_nomatch</span><span class="o">,</span>
+         <span class="kt">int</span> <span class="n">_total</span><span class="o">)</span>
+
+<span class="c1">//Method Detail</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getExact_100</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getFuzzy</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGolden</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNomatch</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getRepetitions</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTotal</span><span class="o">()</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setExact_100</span><span class="o">(</span><span class="kt">int</span> <span class="n">exact_100</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFuzzy</span><span class="o">(</span><span class="kt">int</span> <span class="n">fuzzy</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setGolden</span><span class="o">(</span><span class="kt">int</span> <span class="n">golden</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNomatch</span><span class="o">(</span><span class="kt">int</span> <span class="n">nomatch</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRepetitions</span><span class="o">(</span><span class="kt">int</span> <span class="n">repetitions</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTotal</span><span class="o">(</span><span class="kt">int</span> <span class="n">total</span><span class="o">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">WordCount</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$golden</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">public</span> <span class="nv">$exact_100</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">public</span> <span class="nv">$fuzzy</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">public</span> <span class="nv">$repetitions</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">public</span> <span class="nv">$nomatch</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">public</span> <span class="nv">$total</span><span class="p">;</span> <span class="c1">// int
+</span>    <span class="k">function</span> <span class="nf">WordCount</span><span class="p">(</span><span class="nv">$_golden</span><span class="p">,</span> <span class="nv">$_exact_100</span><span class="p">,</span> <span class="nv">$_repetitions</span><span class="p">,</span> <span class="nv">$_nomatch</span><span class="p">,</span> <span class="nv">$_total</span><span class="p">)</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDWordCount</span> 
+    <span class="kp">attr_accessor</span> <span class="ss">:golden</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:exact_100</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:fuzzy</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:repetitions</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:nomatch</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:total</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">golden</span><span class="p">,</span> <span class="n">exact_100</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">,</span> <span class="n">nomatch</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span> 
+        <span class="vi">@golden</span> <span class="o">=</span> <span class="n">golden</span><span class="p">;</span>
+        <span class="vi">@exact_100</span> <span class="o">=</span> <span class="n">exact_100</span><span class="p">;</span>
+        <span class="vi">@repetitions</span> <span class="o">=</span> <span class="n">repetitions</span><span class="p">;</span>
+        <span class="vi">@nomatch</span> <span class="o">=</span> <span class="n">nomatch</span><span class="p">;</span>
+        <span class="vi">@total</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+        <span class="vi">@fuzzy</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">golden</span> <span class="o">-</span> <span class="n">exact_100</span> <span class="o">-</span> <span class="n">repetitions</span> <span class="o">-</span> <span class="n">nomatch</span><span class="p">;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="k">class</span> <span class="nc">PDWordCount</span><span class="p">:</span>
+    <span class="n">golden</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">exact_100</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">fuzzy</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">repetitions</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">nomatch</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre>
+<h1 id="workflow">Workflow</h1>
+<pre class="highlight csharp tab-csharp"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Workflow</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="n">ticket</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="nf">Workflow</span><span class="p">(</span><span class="n">WorkflowDefinition</span> <span class="n">definition</span><span class="p">)</span>
+    <span class="k">public</span> <span class="nf">Workflow</span><span class="p">(</span><span class="n">GlobalLink</span><span class="p">.</span><span class="n">Connect</span><span class="p">.</span><span class="n">SubmissionServiceRef</span><span class="p">.</span><span class="n">WorkflowDefinition</span> <span class="n">definition</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Workflow</span>
+<span class="kd">extends</span> <span class="n">Object</span>
+
+<span class="c1">//Constructor Detail</span>
+<span class="kd">public</span> <span class="nf">Workflow</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">gs4tr</span><span class="o">.</span><span class="na">projectdirector</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">dto</span><span class="o">.</span><span class="na">WorkflowDefinition</span> <span class="n">definition</span><span class="o">)</span>
+
+<span class="c1">//Field Detail</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">ticket</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">PDWorkflow</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$ticket</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">PDWorkflow</span><span class="p">(</span><span class="nv">$externalWorkflow</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="k">class</span> <span class="nc">PDWorkflow</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:name</span><span class="p">;</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:ticket</span><span class="p">;</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">externalWorkflow</span><span class="p">)</span>
+        <span class="vi">@name</span> <span class="o">=</span> <span class="n">externalWorkflow</span><span class="p">.</span><span class="nf">name</span><span class="p">;</span>
+        <span class="vi">@ticket</span> <span class="o">=</span> <span class="n">externalWorkflow</span><span class="p">.</span><span class="nf">ticket</span><span class="p">;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="c">#No code snippet yet</span>
+</code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="csharp">.NET</a>
+                <a href="#" data-language-name="java">Java</a>
+                <a href="#" data-language-name="php">PHP</a>
+                <a href="#" data-language-name="ruby">Ruby</a>
+                <a href="#" data-language-name="python">Python</a>
           </div>
       </div>
     </div>
