@@ -19,182 +19,9 @@ includes:
 search: true
 ---
 
-# CustomAttribute
 
-```csharp
-public class CustomAttribute
-{
-	public bool mandatory { get; set; }
-	public String name { get; set; }
-	public String type { get; set; }
-	public String values { get; set; }
-}
-```
 
-```java
-public class CustomAttribute
-extends Object
-
-//Constructor Detail
-public CustomAttribute(boolean mandatory,
-	String name,
-	String type,
-	String values)
-```
-
-```php
-<?php
-class PDCustomAttribute {
-	public $mandatory;
-	public $name;
-	public $type;
-	public $values;
-	function PDCustomAttribute($customAttribute = NULL)
-}
-?>
-```
-
-```ruby
-class PDCustomAttribute
-
-	attr_accessor :mandatory
-	attr_accessor :name
-	attr_accessor :type
-	attr_accessor :values
-	
-	def initialize(customAttribute = nil)
-	end
-end
-```
-
-```python
-class PDCustomAttribute:
-	mandatory = 'false'
-	name = ''
-	type = ''
-	values = []
-```
-
-Each project can be configured to allow users to specify custom attributes for their submissions. The custom attributes can be either plain text, or an enum. Custom attributes can be used for reporting, billing etc. eg. You could specify a Cost Center as a custom attribute and instruct your account manager to invoice by cost-center
-
-# Document
-
-```csharp
-public class Document : ReferenceDocument
-{
-	public String sourceLanguage { get; set; }
-	public String[] targetLanguages { get; set; }
-	public String clientIdentifier { get; set; }
-	public String encoding { get; set; }
-	public String fileformat { get; set; }
-	public String instructions { get; set; }
-	public Dictionary<String, String> metadata { get; set; }
-	public Dictionary<String, String> targetWorkflowNames { get; set; }
-	public Document()
-	public DocumentInfo getDocumentInfo(Submission submission)
-	private TargetInfo[] getTargetInfos(Submission submission)
-	public new ResourceInfo getResourceInfo()
-}
-```
-
-```java
-public class Document
-extends ReferenceDocument
-
-//Constructor Detail
-public Document()
-
-//Method Detail
-	public org.gs4tr.projectdirector.model.dto.DocumentInfo getDocumentInfo(Submission submission)
-	public String getFileformat()
-	public org.gs4tr.projectdirector.model.dto.ResourceInfo getResourceInfo()
-	public String getSourceLanguage()
-	public String[] getTargetLanguages()
-	public HashMap<String,String> getTargetWorkflowNames()
-	public void setClientIdentifier(String clientIdentifier)
-	public void setEncoding(String encoding)
-	public void setInstructions(String instructions)
-	public void setMetadata(HashMap<String,String> metadata)
-	public void setSourceLanguage(String sourceLanguage)
-	public void setTargetLanguages(String[] targetLanguages)'
-	public void setTargetWorkflowNames(HashMap<String,String> targetWorkflowNames)
-```
-
-```php
-<?php
-class PDDocument {
-	public $data;
-	public $name;
-	public $sourceLanguage;
-	public $targetLanguages;
-	public $clientIdentifier;
-	public $encoding = "UTF-8";
-	public $fileformat;
-	public $instructions;
-	public $metadata;
-	public function getDocumentInfo($submission)
-	private function getTargetInfos()
-	public function getResourceInfo()
-}
-?>
-```
-
-```ruby
-class PDDocument
-	attr_accessor :data
-	attr_accessor :name
-	attr_accessor :sourceLanguage
-	attr_accessor :targetLanguages
-	attr_accessor :clientIdentifier
-	attr_accessor :encoding
-	attr_accessor :fileformat
-	attr_accessor :instructions
-	attr_accessor :metadata
-	def initialize 
-		@encoding = "UTF-8"
-		@clientIdentifier = nil
-	end
-	def getDocumentInfo(submission)
-	end
-	def getTargetInfos (submission)
-	end
-	def getResourceInfo
-	end
-end
-```
-
-```python
-class PDDocument:
-	data = ''
-	name = ''
-	sourceLanguage = ''
-	targetLanguages = []
-	clientIdentifier = None
-	encoding = "UTF-8"
-	fileformat = ''
-	instructions = ''
-	metadata = {}
-```
-
-This class will determine the necessary attributes to start a submission: 
-
-Method | Returns | Sumary 
------- | ------- | -------
-`getDocumentInfo` | `DocumentInfo` object | Internal method used by the UCF API
-`getFileformat` |  |  
-`getResourceInfo` | `ResourceInfo` object | Internal method used by the UCF API
-`getSourceLanguage` |  |  
-`getTargetLanguages` |  |  
-`getTargetWorkflowNames` |  |  
-`setClientIdentifier` |  | Specify a unique identifier for this document (if one exists) in the content management system
-`setEncoding` |  | Set encoding
-`setFileformat` |  | Defaults to configured `fileFormat` on project director
-`setInstructions` |  | Additional metadata that you may want to attach to your document
-`setSourceLanguage` |  | Set Source Language of the document
-`setTargetLanguages` |  | Set target languages into which this document will be translated
-`setTargetWorkflowNames` |  |  
-
-# GLExchange
+# Main Class - GLExchange
 
 ```csharp
 public class GLExchange
@@ -478,61 +305,9 @@ Method | Returns | Sumary
 `uploadTranslatable` | Document Ticket | Uploads the document to project director for translation
 `uploadTranslationKit` |  |  
 
-# LanguageDirection
+# Models
 
-A language direction defines the source and target language direction for which users can submit translation requests.
-
-```csharp
-public class LanguageDirection
-{
-	public String sourceLanguage { get; set; }
-	public String targetLanguage { get; set; }
-	public LanguageDirection(ProjectLanguageDirection direction)
-}
-```
-
-```java
-public class LanguageDirection
-extends Object
-
-//Constructor Detail
-public LanguageDirection(org.gs4tr.projectdirector.model.dto.ProjectLanguageDirection direction)
-
-//Field Detail
-	public String sourceLanguage
-	public String targetLanguage
-	public TMProfile TM
-```
-
-```php
-<?php
-class PDLanguageDirection {
-	public $sourceLanguage;
-	public $sourceLanguageName;
-	public $targetLanguage;
-	public $targetLanguageName;
-	function PDLanguageDirection($externalLanguageDirection)
-}
-?>
-```
-
-```ruby
-class PDLanguageDirection
-	attr_accessor :sourceLanguage
-	attr_accessor :targetLanguage
-end
-```
-
-```python
-class PDLanguageDirection:
-	sourceLanguage = ''
-	targetLanguage = ''
-	def __init__(self, externalLanguageDirection) :
-		self.sourceLanguage = externalLanguageDirection.sourceLanguage.locale
-		self.targetLanguage = externalLanguageDirection.targetLanguage.locale
-```
-
-# Project
+## Project
 
 ```csharp
 public class Project
@@ -628,222 +403,7 @@ Method | Returns | Sumary
 `getWorkflows` | List of configured workflows for this project | Get Workflows
 `setSubmitters` |  |  
 
-# ProjectDirectorConfig
-
-```csharp
-private static ProjectDirectorConfig getPDConfig()
-{
-	ProjectDirectorConfig config = new ProjectDirectorConfig();
-	string url = ConfigurationManager.AppSettings[CONFIG_URL];
-	string username = ConfigurationManager.AppSettings[CONFIG_USERNAME];
-	string password = ConfigurationManager.AppSettings[CONFIG_PASSWORD];
-	string userAgent = ConfigurationManager.AppSettings[CONFIG_USERAGENT];
-	config.userAgent = userAgent;
-	return config;
-}
-```
-
-```java
-public class ProjectDirectorConfig
-extends Object
-
-//Constructor Detail
-public ProjectDirectorConfig()
-
-//Method Detail
-	public String getPassword()
-	public ProxyConfig getProxy()
-	public int getTimeOut()
-	public String getUrl()
-	public String getUserAgent()
-	public String getUsername()
-	public Boolean isEnableMTOM()
-	public void setEnableMTOM(Boolean enableMTOM)
-	public void setPassword(String password)
-	public void setProxy(ProxyConfig proxy)
-	public void setTimeOut(int timeOut)
-	public void setUrl(String url)
-	public void setUserAgent(String userAgent)
-	public void setUsername(String username)
-```
-
-```php
-<?php
-class PDConfig {
-	public $url;
-	public $username;
-	public $password;
-	public $proxyConfig;
-	public $userAgent;
-}
-?>
-```
-
-```ruby
-class ProjectDirectorConfig
-	attr_accessor :password
-	attr_accessor :url
-	attr_accessor :username
-	attr_accessor :userAgent
-end
-```
-
-```python
-class ProjectDirectorConfig:
-	url = None
-	username = None
-	password = None
-	userAgent = None
-```
-
-Project director configuration
-
-Method | Returns | Sumary 
------- | ------- | -------
-`getPassword` | String Project Director password | Get Project Director configured password 
-`getProxy` | Proxy configuration for outbound traffic | Get the proxy configuration for communication between adaptor and GLC
-`getTimeOut` | Int Response timeout for webservice calls | Get the timeout value 
-`getUrl` | String URL or IP address of the Project Director server | Get Project Director URL
-`getUserAgent` | String user Agent for this client | Returns 
-`getUsername` | Project Director username | Get Project Director configured username 
-`isEnableMTOM` | Boolean | Returns `true` if MTOM is enabled
-`setEnableMTOM` |  | Set it to `false` to disable MTOM. Default is `true`
-`setPassword` |  | Sets Project Director password
-`setProxy` |  | Set proxy configuration for outbound traffic
-`setTimeOut` |  | Set response timeout for webservice calls
-`setUrl` |  | URL of the project director server to connect to
-`setUserAgent` |  | Sets the user Agent for this client. A user agent is any user friendly identifier which is used to categorize the logging on GlobalLink
-`setUsername` |  | Sets Project Director username
-
-# Proxy Config
-
-```csharp
-///No code snippet yet
-```
-
-```java
-public class ProxyConfig
-extends Object
-
-//Constructor Detail
-public ProxyConfig()
-
-//Method Detail
-	public String getProxyHost()
-	public String getProxyPassword()
-	public int getProxyPort()
-	public String getProxyUser()
-	public void setProxyHost(String proxyHost)
-	public void setProxyPassword(String proxyPassword)
-	public void setProxyPort(int proxyPort)
-	public void setProxyUser(String proxyUser)
-```
-
-```php
-<?php
-class ProxyConfig {
-	public $proxyHost;
-	public $proxyPort;
-	public $proxyUser;
-	public $proxyPassword;
-}
-?>
-```
-
-```ruby
-#No code snippet yet
-```
-
-```python
-#No code snippet yet
-```
-
-Method | Returns | Sumary 
------- | ------- | -------
-`getProxyHost` | String | Returns proxy server IP address or hostname
-`getProxyPassword` | String | Returns proxy user password
-`getProxyPort` | Int | Returns proxy server port
-`getProxyUser` | String | Returns proxy user
-`setProxyHost` |  | Set Proxy server IP address or hostname
-`setProxyPassword` |  | Proxy server user password
-`setProxyPort` |  | Set Proxy server port
-`setProxyUser` |  | Set Proxy user
-
-# ReferenceDocument
-
-Reference documents contain additional information which provide more context about the Documents that have been submitted for translation. eg. While submitting Indesign documents, the reference files usually contain the published source PDF The ReferenceDocuments do not require translation and are not accounted for in the translation wordcounts.
-
-```csharp
-public class ReferenceDocument
-{
-	public byte[] data { get; set; }
-	public String name { get; set; }
-	public void setDataFromString(String data)
-	public void setDataFromMemoryStream(MemoryStream data)
-	public ResourceInfo getResourceInfo()
-	public String getDataAsString()
-}
-```
-
-```java
-public class ReferenceDocument
-extends Object
-
-//Constructor Detail
-public ReferenceDocument()
-
-//Method Detail
-	public byte[] getData()
-	public InputStream getDataAsInputStream()
-	public String getName()
-	public org.gs4tr.projectdirector.model.dto.ResourceInfo getResourceInfo()
-	public void setData(byte[] data)
-	public void setData(byte[] data)
-	public void setData(InputStream inputStream)
-			throws IOException
-	public void setData(String data,
-			    String encoding)
-			throws UnsupportedEncodingException
-	public void setName(String name)
-```
-
-```php
-<?php
-class PDReferenceDocument {
-	public $data;
-	public $name;
-	public function getResourceInfo()
-}
-?>
-```
-
-```ruby
-class PDReferenceDocument
-	attr_accessor :data
-	attr_accessor :name
-	
-	def getResourceInfo
-		resourceInfo = ResourceInfonew
-		resourceInfo.size = @data.length
-		resourceInfo.name = @name
-		return resourceInfo
-	end
-end
-```
-
-```python
-#No code snippet yet
-```
-
-Method | Returns | Sumary 
------- | ------- | -------
-`getDataAsInputStream` | `InputStream` | Gets data as InputStream
-`getName` | String | Gets the name of the document
-`getResourceInfo` |  |  
-`setData` |  | Set data from byte array or set data from `InputStream` or set data from string or set `data(byte[])` from string using encoding
-`setName` |  | Set document name
-
-# Submission
+## Submission
 
 ```csharp
 public class Submission
@@ -974,7 +534,301 @@ Method | Returns | Sumary
 `setSubmitter` |  | *Optional* - Set the submitter to a user other than the logged in user
 `setUrgent` |  | *Optional* - Set priority. Defaults to Normal
 
-# Target
+## Document
+
+```csharp
+public class Document : ReferenceDocument
+{
+	public String sourceLanguage { get; set; }
+	public String[] targetLanguages { get; set; }
+	public String clientIdentifier { get; set; }
+	public String encoding { get; set; }
+	public String fileformat { get; set; }
+	public String instructions { get; set; }
+	public Dictionary<String, String> metadata { get; set; }
+	public Dictionary<String, String> targetWorkflowNames { get; set; }
+	public Document()
+	public DocumentInfo getDocumentInfo(Submission submission)
+	private TargetInfo[] getTargetInfos(Submission submission)
+	public new ResourceInfo getResourceInfo()
+}
+```
+
+```java
+public class Document
+extends ReferenceDocument
+
+//Constructor Detail
+public Document()
+
+//Method Detail
+	public org.gs4tr.projectdirector.model.dto.DocumentInfo getDocumentInfo(Submission submission)
+	public String getFileformat()
+	public org.gs4tr.projectdirector.model.dto.ResourceInfo getResourceInfo()
+	public String getSourceLanguage()
+	public String[] getTargetLanguages()
+	public HashMap<String,String> getTargetWorkflowNames()
+	public void setClientIdentifier(String clientIdentifier)
+	public void setEncoding(String encoding)
+	public void setInstructions(String instructions)
+	public void setMetadata(HashMap<String,String> metadata)
+	public void setSourceLanguage(String sourceLanguage)
+	public void setTargetLanguages(String[] targetLanguages)'
+	public void setTargetWorkflowNames(HashMap<String,String> targetWorkflowNames)
+```
+
+```php
+<?php
+class PDDocument {
+	public $data;
+	public $name;
+	public $sourceLanguage;
+	public $targetLanguages;
+	public $clientIdentifier;
+	public $encoding = "UTF-8";
+	public $fileformat;
+	public $instructions;
+	public $metadata;
+	public function getDocumentInfo($submission)
+	private function getTargetInfos()
+	public function getResourceInfo()
+}
+?>
+```
+
+```ruby
+class PDDocument
+	attr_accessor :data
+	attr_accessor :name
+	attr_accessor :sourceLanguage
+	attr_accessor :targetLanguages
+	attr_accessor :clientIdentifier
+	attr_accessor :encoding
+	attr_accessor :fileformat
+	attr_accessor :instructions
+	attr_accessor :metadata
+	def initialize 
+		@encoding = "UTF-8"
+		@clientIdentifier = nil
+	end
+	def getDocumentInfo(submission)
+	end
+	def getTargetInfos (submission)
+	end
+	def getResourceInfo
+	end
+end
+```
+
+```python
+class PDDocument:
+	data = ''
+	name = ''
+	sourceLanguage = ''
+	targetLanguages = []
+	clientIdentifier = None
+	encoding = "UTF-8"
+	fileformat = ''
+	instructions = ''
+	metadata = {}
+```
+
+This class will determine the necessary attributes to start a submission: 
+
+Method | Returns | Sumary 
+------ | ------- | -------
+`getDocumentInfo` | `DocumentInfo` object | Internal method used by the UCF API
+`getFileformat` |  |  
+`getResourceInfo` | `ResourceInfo` object | Internal method used by the UCF API
+`getSourceLanguage` |  |  
+`getTargetLanguages` |  |  
+`getTargetWorkflowNames` |  |  
+`setClientIdentifier` |  | Specify a unique identifier for this document (if one exists) in the content management system
+`setEncoding` |  | Set encoding
+`setFileformat` |  | Defaults to configured `fileFormat` on project director
+`setInstructions` |  | Additional metadata that you may want to attach to your document
+`setSourceLanguage` |  | Set Source Language of the document
+`setTargetLanguages` |  | Set target languages into which this document will be translated
+`setTargetWorkflowNames` |  |  
+
+## ReferenceDocument
+
+Reference documents contain additional information which provide more context about the Documents that have been submitted for translation. eg. While submitting Indesign documents, the reference files usually contain the published source PDF The ReferenceDocuments do not require translation and are not accounted for in the translation wordcounts.
+
+```csharp
+public class ReferenceDocument
+{
+	public byte[] data { get; set; }
+	public String name { get; set; }
+	public void setDataFromString(String data)
+	public void setDataFromMemoryStream(MemoryStream data)
+	public ResourceInfo getResourceInfo()
+	public String getDataAsString()
+}
+```
+
+```java
+public class ReferenceDocument
+extends Object
+
+//Constructor Detail
+public ReferenceDocument()
+
+//Method Detail
+	public byte[] getData()
+	public InputStream getDataAsInputStream()
+	public String getName()
+	public org.gs4tr.projectdirector.model.dto.ResourceInfo getResourceInfo()
+	public void setData(byte[] data)
+	public void setData(byte[] data)
+	public void setData(InputStream inputStream)
+			throws IOException
+	public void setData(String data,
+			    String encoding)
+			throws UnsupportedEncodingException
+	public void setName(String name)
+```
+
+```php
+<?php
+class PDReferenceDocument {
+	public $data;
+	public $name;
+	public function getResourceInfo()
+}
+?>
+```
+
+```ruby
+class PDReferenceDocument
+	attr_accessor :data
+	attr_accessor :name
+	
+	def getResourceInfo
+		resourceInfo = ResourceInfonew
+		resourceInfo.size = @data.length
+		resourceInfo.name = @name
+		return resourceInfo
+	end
+end
+```
+
+```python
+#No code snippet yet
+```
+
+Method | Returns | Sumary 
+------ | ------- | -------
+`getDataAsInputStream` | `InputStream` | Gets data as InputStream
+`getName` | String | Gets the name of the document
+`getResourceInfo` |  |  
+`setData` |  | Set data from byte array or set data from `InputStream` or set data from string or set `data(byte[])` from string using encoding
+`setName` |  | Set document name
+
+## Workflow
+
+```csharp
+public class Workflow
+{
+	public String name { get; set; }
+	public String ticket { get; set; }
+	public Workflow(WorkflowDefinition definition)
+	public Workflow(GlobalLink.Connect.SubmissionServiceRef.WorkflowDefinition definition)
+}
+```
+
+```java
+public class Workflow
+extends Object
+
+//Constructor Detail
+public Workflow(org.gs4tr.projectdirector.model.dto.WorkflowDefinition definition)
+
+//Field Detail
+	public String name
+	public String ticket
+```
+
+```php
+<?php
+class PDWorkflow {
+	public $name;
+	public $ticket;
+	function PDWorkflow($externalWorkflow)
+}
+?>
+```
+
+```ruby
+class PDWorkflow
+	attr_accessor :name;
+	attr_accessor :ticket;
+	def initialize(externalWorkflow)
+		@name = externalWorkflow.name;
+		@ticket = externalWorkflow.ticket;
+	end
+end
+```
+
+```python
+#No code snippet yet
+```
+
+## LanguageDirection
+
+A language direction defines the source and target language direction for which users can submit translation requests.
+
+```csharp
+public class LanguageDirection
+{
+	public String sourceLanguage { get; set; }
+	public String targetLanguage { get; set; }
+	public LanguageDirection(ProjectLanguageDirection direction)
+}
+```
+
+```java
+public class LanguageDirection
+extends Object
+
+//Constructor Detail
+public LanguageDirection(org.gs4tr.projectdirector.model.dto.ProjectLanguageDirection direction)
+
+//Field Detail
+	public String sourceLanguage
+	public String targetLanguage
+	public TMProfile TM
+```
+
+```php
+<?php
+class PDLanguageDirection {
+	public $sourceLanguage;
+	public $sourceLanguageName;
+	public $targetLanguage;
+	public $targetLanguageName;
+	function PDLanguageDirection($externalLanguageDirection)
+}
+?>
+```
+
+```ruby
+class PDLanguageDirection
+	attr_accessor :sourceLanguage
+	attr_accessor :targetLanguage
+end
+```
+
+```python
+class PDLanguageDirection:
+	sourceLanguage = ''
+	targetLanguage = ''
+	def __init__(self, externalLanguageDirection) :
+		self.sourceLanguage = externalLanguageDirection.sourceLanguage.locale
+		self.targetLanguage = externalLanguageDirection.targetLanguage.locale
+```
+
+## Target
 
 ```csharp
 public class Target
@@ -1081,7 +935,7 @@ Method | Returns | Sumary
 `getData` | `InputStream` containing the translated content | Get translated data or get translated data and download if empty
 `setDocumentName` |  | Set Document Name
 
-# TM Profile
+## TM Profile
 
 ```csharp
 ///No code snippet yet
@@ -1118,7 +972,7 @@ public TMProfile(String url,
 #No code snippet yet
 ```
 
-# WordCount
+## WordCount
 
 ```csharp
 public class WordCount
@@ -1209,52 +1063,206 @@ class PDWordCount:
 	total = None
 ```
 
-# Workflow
+
+
+## CustomAttribute
 
 ```csharp
-public class Workflow
+public class CustomAttribute
 {
+	public bool mandatory { get; set; }
 	public String name { get; set; }
-	public String ticket { get; set; }
-	public Workflow(WorkflowDefinition definition)
-	public Workflow(GlobalLink.Connect.SubmissionServiceRef.WorkflowDefinition definition)
+	public String type { get; set; }
+	public String values { get; set; }
 }
 ```
 
 ```java
-public class Workflow
+public class CustomAttribute
 extends Object
 
 //Constructor Detail
-public Workflow(org.gs4tr.projectdirector.model.dto.WorkflowDefinition definition)
-
-//Field Detail
-	public String name
-	public String ticket
+public CustomAttribute(boolean mandatory,
+	String name,
+	String type,
+	String values)
 ```
 
 ```php
 <?php
-class PDWorkflow {
+class PDCustomAttribute {
+	public $mandatory;
 	public $name;
-	public $ticket;
-	function PDWorkflow($externalWorkflow)
+	public $type;
+	public $values;
+	function PDCustomAttribute($customAttribute = NULL)
 }
 ?>
 ```
 
 ```ruby
-class PDWorkflow
-	attr_accessor :name;
-	attr_accessor :ticket;
-	def initialize(externalWorkflow)
-		@name = externalWorkflow.name;
-		@ticket = externalWorkflow.ticket;
+class PDCustomAttribute
+
+	attr_accessor :mandatory
+	attr_accessor :name
+	attr_accessor :type
+	attr_accessor :values
+	
+	def initialize(customAttribute = nil)
 	end
 end
+```
+
+```python
+class PDCustomAttribute:
+	mandatory = 'false'
+	name = ''
+	type = ''
+	values = []
+```
+
+Each project can be configured to allow users to specify custom attributes for their submissions. The custom attributes can be either plain text, or an enum. Custom attributes can be used for reporting, billing etc. eg. You could specify a Cost Center as a custom attribute and instruct your account manager to invoice by cost-center
+
+
+
+# Configuration
+## ProjectDirectorConfig
+
+```csharp
+private static ProjectDirectorConfig getPDConfig()
+{
+	ProjectDirectorConfig config = new ProjectDirectorConfig();
+	string url = ConfigurationManager.AppSettings[CONFIG_URL];
+	string username = ConfigurationManager.AppSettings[CONFIG_USERNAME];
+	string password = ConfigurationManager.AppSettings[CONFIG_PASSWORD];
+	string userAgent = ConfigurationManager.AppSettings[CONFIG_USERAGENT];
+	config.userAgent = userAgent;
+	return config;
+}
+```
+
+```java
+public class ProjectDirectorConfig
+extends Object
+
+//Constructor Detail
+public ProjectDirectorConfig()
+
+//Method Detail
+	public String getPassword()
+	public ProxyConfig getProxy()
+	public int getTimeOut()
+	public String getUrl()
+	public String getUserAgent()
+	public String getUsername()
+	public Boolean isEnableMTOM()
+	public void setEnableMTOM(Boolean enableMTOM)
+	public void setPassword(String password)
+	public void setProxy(ProxyConfig proxy)
+	public void setTimeOut(int timeOut)
+	public void setUrl(String url)
+	public void setUserAgent(String userAgent)
+	public void setUsername(String username)
+```
+
+```php
+<?php
+class PDConfig {
+	public $url;
+	public $username;
+	public $password;
+	public $proxyConfig;
+	public $userAgent;
+}
+?>
+```
+
+```ruby
+class ProjectDirectorConfig
+	attr_accessor :password
+	attr_accessor :url
+	attr_accessor :username
+	attr_accessor :userAgent
+end
+```
+
+```python
+class ProjectDirectorConfig:
+	url = None
+	username = None
+	password = None
+	userAgent = None
+```
+
+Project director configuration
+
+Method | Returns | Sumary 
+------ | ------- | -------
+`getPassword` | String Project Director password | Get Project Director configured password 
+`getProxy` | Proxy configuration for outbound traffic | Get the proxy configuration for communication between adaptor and GLC
+`getTimeOut` | Int Response timeout for webservice calls | Get the timeout value 
+`getUrl` | String URL or IP address of the Project Director server | Get Project Director URL
+`getUserAgent` | String user Agent for this client | Returns 
+`getUsername` | Project Director username | Get Project Director configured username 
+`isEnableMTOM` | Boolean | Returns `true` if MTOM is enabled
+`setEnableMTOM` |  | Set it to `false` to disable MTOM. Default is `true`
+`setPassword` |  | Sets Project Director password
+`setProxy` |  | Set proxy configuration for outbound traffic
+`setTimeOut` |  | Set response timeout for webservice calls
+`setUrl` |  | URL of the project director server to connect to
+`setUserAgent` |  | Sets the user Agent for this client. A user agent is any user friendly identifier which is used to categorize the logging on GlobalLink
+`setUsername` |  | Sets Project Director username
+
+## Proxy Config
+
+```csharp
+///No code snippet yet
+```
+
+```java
+public class ProxyConfig
+extends Object
+
+//Constructor Detail
+public ProxyConfig()
+
+//Method Detail
+	public String getProxyHost()
+	public String getProxyPassword()
+	public int getProxyPort()
+	public String getProxyUser()
+	public void setProxyHost(String proxyHost)
+	public void setProxyPassword(String proxyPassword)
+	public void setProxyPort(int proxyPort)
+	public void setProxyUser(String proxyUser)
+```
+
+```php
+<?php
+class ProxyConfig {
+	public $proxyHost;
+	public $proxyPort;
+	public $proxyUser;
+	public $proxyPassword;
+}
+?>
+```
+
+```ruby
+#No code snippet yet
 ```
 
 ```python
 #No code snippet yet
 ```
 
+Method | Returns | Sumary 
+------ | ------- | -------
+`getProxyHost` | String | Returns proxy server IP address or hostname
+`getProxyPassword` | String | Returns proxy user password
+`getProxyPort` | Int | Returns proxy server port
+`getProxyUser` | String | Returns proxy user
+`setProxyHost` |  | Set Proxy server IP address or hostname
+`setProxyPassword` |  | Proxy server user password
+`setProxyPort` |  | Set Proxy server port
+`setProxyUser` |  | Set Proxy user
