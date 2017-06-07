@@ -13,7 +13,11 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-
+//azul claro - #4986b4
+//azul oscuro - #224b6a
+//changed - 4986b4 --> #4986b4
+//changed - 222 --> #224b6a
+//changed - 262626 --> #224b6a
 
 ////////////////////////////////////////////////////////////////////////////////
 // CUSTOMIZE SLATE
@@ -23,14 +27,14 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939 !default;
-$examples-bg: #393939 !default;
+$nav-bg: #4986b4 !default;
+$examples-bg: #4986b4 !default;
 $code-bg: #292929 !default;
 $code-annotation-bg: #1c1c1c !default;
-$nav-subitem-bg: #262626 !default;
+$nav-subitem-bg: #224b6a !default;
 $nav-active-bg: #2467af !default;
 $lang-select-border: #000 !default;
-$lang-select-bg: #222 !default;
+$lang-select-bg: #224b6a !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
 $main-bg: #eaf2f6 !default;
