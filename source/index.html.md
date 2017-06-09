@@ -19,7 +19,7 @@ search: true
 
 
 
-# Main Class - GLExchange
+# GLExchange - Main Class
 
 ```php
 <?php
@@ -195,7 +195,7 @@ Method | Parmeter | Sumary
 `uploadTranslatable` | `document` | Uploads the document to project director for translation and returns `documentTicket`
 `uploadTranslationKit` | `fileName` & `data` | Uploads preliminary delivery file to project director
 
-# Models
+# Models Classes
 
 ## Project
 
@@ -694,7 +694,7 @@ Method | Returns | Sumary
 `type` | string | Prints the attribute type
 `values` | Array | Prints the attribute value(s)
 
-# Configuration
+# Configuration Classes
 ## ProjectDirectorConfig
 
 ```php
