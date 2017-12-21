@@ -180,8 +180,6 @@ Method | Returns | Sumary
 `getSubmissionName` | String | Get Submission name for specified ticket
 `getSubmissionTickets` | String | Get Submission ticket if a submission has been initialized
 `getUnstartedSubmissions` | Array | Get Unstarted Submissions
-`getSubmissionStatus` | Boolean | Get Submission status for specified ticket. True if submission is complete.
-`isSubmissionComplete` | Boolean | Get Submission status for specified ticket. True if submission is complete
 `startSubmission` | String | Start Submission
 
 Method | Parmeter | Sumary 
